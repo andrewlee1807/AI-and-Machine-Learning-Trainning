@@ -1,0 +1,40 @@
+from __future__ import print_function
+import torch
+
+x = torch.empty(5,3)
+y = torch.rand(5,3)
+z = torch.zeros(5,3, dtype=torch.long)
+tensor = torch.tensor(y)
+print(x)
+print(y)
+print(z)
+print(tensor) 
+x = torch.tensor([5.5, 3])
+x = torch.randn_like(y, dtype=torch.float)
+print(x)
+print(x.size())
+a = x+y
+torch.add(x,y, out=a)
+print(a)
+print(a[:,1])
+print(a.view(5,-1))
+x = torch.randn(1)
+print(x)
+print(x.item())
+print(a[1,1].item())
+b = a.numpy()
+print(b)
+a.add_(12)
+print(a)
+print(b)
+
+if torch.cuda.is_available():
+    device = torch.device("cuda")
+    print(device)
+    y = torch.ones_like(a, device=device)
+    print(y)
+    a = a.to(device)
+    print(a)
+    z = a + y
+    print(z)
+    print(z.to("cpu", torch.double))
