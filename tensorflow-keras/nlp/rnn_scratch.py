@@ -36,3 +36,6 @@ for word in sentence:
     predict, hidden_state = rnn.call(word)
 
 print(predict)
+
+print(tf.__version__)
+print(tf.test.is_gpu_available())
