@@ -46,7 +46,7 @@ def ex3():
 
 # FIBONACCI
 def ex4():
-    num = int(input("Number of PIBONACCI : "))
+    num = int(input("Number of FIBONACCI : "))
 
     def fibo(i):
         if i > 2:
