@@ -23,3 +23,4 @@ def dfs_queen(i):
 
 
 dfs_queen(0)
+
