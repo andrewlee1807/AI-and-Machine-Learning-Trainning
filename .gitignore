@@ -109,6 +109,7 @@ dmypy.json
 *.pth
 *.png
 *.jpeg
+*.jpg
 *.bin
 *.xml
 
